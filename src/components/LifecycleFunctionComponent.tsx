@@ -26,10 +26,11 @@ const LyfecycleFunctionComponent = () =>{
         return ()=> console.log('Function: componentWillUnmount')
     },[])
 
-    return (<>
+    return (<div>
+        <div>функциональный компонент</div>
         <div>{count}</div>
         <button onClick={incrimentCount}>+</button>
-    </>)
+    </div>)
 }
 
 export default LyfecycleFunctionComponent

@@ -9,7 +9,7 @@ type LyfecycleClassComponentProps = object
 export class LyfecycleClassComponent extends React.Component<LyfecycleClassComponentProps,LyfecycleClassComponentState>{
     constructor(props: LyfecycleClassComponentProps){
         super(props);
-        this.state = {count:1}
+        this.state = {count:0}
     }
 
     shouldComponentUpdate(): boolean {
@@ -41,9 +41,10 @@ export class LyfecycleClassComponent extends React.Component<LyfecycleClassCompo
     render(): React.ReactNode {
         const {count } = this.state
 
-        return (<>
+        return (<div>
+            <div>классовый компонент</div>
             <div>{count}</div>
             <button onClick={this.incrimentCount}>+</button>
-        </>)
+        </div>)
     }
 }
